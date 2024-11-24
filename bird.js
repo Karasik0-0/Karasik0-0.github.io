@@ -83,3 +83,7 @@ draw()
 document.addEventListener('click', function(){
   change = 4.25
 })
+
+function reloadPage() {
+  location.reload();
+}
