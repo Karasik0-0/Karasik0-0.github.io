@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #202020;
+}
+
+.site-header {
+    background-color: #323232; /* Цвет фона */
+    color: white; /* Цвет текста */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navigation ul {
+    list-style-type: none; /* Убираем маркеры */
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-left: 20px; /* Отступ между пунктами меню */
+}
+
+.navigation a {
+    color: white; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    padding: 5px 10px; /* Отступы внутри ссылки */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Цвет фона при наведении */
+}
+
+.img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.flappybird{
+    position: absolute;
+    width: 664px;
+    height: 1076px;
+    left: 46px;
+    top: 138px;
+
+    background: #D9D9D9;
+    border-radius: 31px;
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 574px;
+    height: 1020px;
+    border: 6px solid #D9D9D9;
+    border-radius: 15px;
+
+}
+
+.zagol{
+    position: absolute;
+    width: 281px;
+    height: 40px;
+    left: 700px;
+    top: 161px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: -0.5px;
+    color: white;
+
+
+}
+
+.zagol2{
+    position: absolute;
+    padding: 20px;
+    left: 700px;
+    top: 261px;
+    font-family: 'Manrope';
+    font-size: 36px;
+    color: white;
+    border-radius: 10px;
+    border: 6px solid #D9D9D9;
+}
+
+.site-footer {
+    background-color: #333; /* Цвет фона футера */
+    color: #fff; /* Цвет текста */
+    padding: 20px; /* Отступы внутри футера */
+    text-align: center; /* Выравнивание текста по центру */
+    position: relative; /* Для правильного позиционирования */
+    bottom: 0; /* Привязка к низу страницы */
+    width: 100%; /* Ширина на всю ширину экрана */
+    position: absolute;
+    top: 1700px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование содержимого по горизонтали */
+}
+
+.footer-navigation ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.footer-navigation li {
+    display: inline; /* Располагаем элементы списка в строку */
+    margin: 0 15px; /* Отступы между элементами списка */
+}
+
+.footer-navigation a {
+    color: #fff; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.footer-navigation a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px; /* Отступы по бокам */
+    }
+
+    .site-header {
+        flex-direction: column; /* Вертикальное расположение элементов */
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    .flappybird{
+        position: absolute;
+        width: 464px;
+        height: 1076px;
+        left: 25px;
+        top: 208px;
+    
+        background: #D9D9D9;
+        border-radius: 31px;
+    
+        box-sizing: border-box;
+    
+        position: absolute;
+        width: 574px;
+        height: 920px;
+        border: 6px solid #D9D9D9;
+        border-radius: 15px;
+    
+    }
+
+    .zagol{
+        position: absolute;
+        width: 281px;
+        height: 40px;
+        left: 25px;
+        top: 1161px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 49px;
+        letter-spacing: -0.5px;
+        color: white;
+    
+    
+    }
+    
+    .zagol2{
+        position: absolute;
+        padding: 20px;
+        left: 1px;
+        top: 1241px;
+        font-family: 'Manrope';
+        font-size: 36px;
+        color: white;
+        border-radius: 10px;
+        border: 6px solid #D9D9D9;
+    }
+
+    .site-footer {
+        position: relative; /* Изменяем позиционирование футера */
+        top: 1780px; /* Убираем смещение по вертикали */
+        padding: 10px; /* Уменьшаем отступы внутри футера */
+    }
+}
