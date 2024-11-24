@@ -13,6 +13,16 @@ body {
     padding: 10px 20px;
 }
 
+.reload{
+    position: relative;
+    border-radius: 10px;
+    left: 140px;
+    top: 8px;
+    background-color: rgb(159, 161, 162);
+    font-size: 20px;
+    color: aliceblue;
+}
+
 .logo {
     font-size: 24px;
     font-weight: bold;
