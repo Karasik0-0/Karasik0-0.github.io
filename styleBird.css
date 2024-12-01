@@ -23,6 +23,11 @@ body {
     color: aliceblue;
 }
 
+.flappybird{
+    width: 100vw;
+    height: 100vh;
+}
+
 .logo {
     font-size: 24px;
     font-weight: bold;
