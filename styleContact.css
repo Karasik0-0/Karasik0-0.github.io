@@ -184,7 +184,7 @@ body {
         cursor: pointer;
         margin-left: auto; /* Сдвигаем бургер-меню вправо */
     }
-    .wk{
+.wk{
         position: absolute;
         width: 374px;
         height: 253px;
