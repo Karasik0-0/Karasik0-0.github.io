@@ -87,3 +87,23 @@ document.addEventListener('click', function(){
 function reloadPage() {
   location.reload();
 }
+
+let lastFrameTime = 0;
+const targetFPS = 30; // желаемая частота кадров
+const frameDuration = 1000 / targetFPS;
+
+function gameLoop(currentTime) {
+    if (currentTime - lastFrameTime >= frameDuration) {
+        lastFrameTime = currentTime;
+
+        // Обновление состояния игры и рендеринг
+        updateGame();
+        renderGame();
+    }
+
+    requestAnimationFrame(gameLoop);
+}
+
+requestAnimationFrame(gameLoop);
+
+
