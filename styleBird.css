@@ -13,19 +13,19 @@ body {
     padding: 10px 20px;
 }
 
-.reload{
-    position: relative;
-    border-radius: 10px;
-    left: 140px;
-    top: 8px;
-    background-color: rgb(159, 161, 162);
-    font-size: 20px;
-    color: aliceblue;
-}
-
 .flappybird{
     width: 100vw;
     height: 100vh;
+}
+
+.reload{
+    position: relative;
+    border-radius: 10px;
+    left: 700px;
+    top: 600px;
+    background-color: rgb(159, 161, 162);
+    font-size: 20px;
+    color: aliceblue;
 }
 
 .logo {
@@ -204,6 +204,16 @@ body {
         color: white;
         border-radius: 10px;
         border: 6px solid #D9D9D9;
+    }
+
+    .reload{
+        position: relative;
+        border-radius: 10px;
+        left: 140px;
+        top: 8px;
+        background-color: rgb(159, 161, 162);
+        font-size: 20px;
+        color: aliceblue;
     }
 
     .site-footer {
