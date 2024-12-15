@@ -143,10 +143,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: 0 10px; /* Отступы по бокам */
-    }
-
     .site-header {
         flex-direction: column; /* Вертикальное расположение элементов */
         padding: 10px; /* Уменьшаем отступы */
@@ -184,59 +180,60 @@ body {
         cursor: pointer;
         margin-left: auto; /* Сдвигаем бургер-меню вправо */
     }
-.wk{
+
+    .wk{
         position: absolute;
-        width: 374px;
-        height: 253px;
+        max-width: 78%;
+        height: 203px;
         left: 15px;
         top: 240px;
         background: #D9D9D9;
         border-radius: 31px;
-        padding: 22px 42px;
-        font-size: 30px;
+        padding: 12px 12px;
+        font-size: 25px;
     }
     
     .wkicone{
         position: absolute;
-        width: 200px;
-        left: 255px;
+        width: 170px;
+        left: 205px;
         top: 305px;
     }
 
     .tg{
         position: absolute;
-        width: 374px;
-        height: 253px;
+        max-width: 78%;
+        height: 203px;
         left: 17px;
         top: 671px;
         background: #D9D9D9;
         border-radius: 31px;
-        padding: 22px 42px;
-        font-size: 30px;
+        padding: 22px 12px;
+        font-size: 25px;
     }
 
     .tgicone{
         position: absolute;
-        width: 220px;
-        left: 255px;
+        width: 170px;
+        left: 205px;
         top: 740px;
     }
 
     .phone{
         position: absolute;
-        width: 374px;
-        height: 183px;
+        max-width: 78%;
+        height: 163px;
         left: 15px;
         top: 1091px;
         background: #D9D9D9;
         border-radius: 31px;
-        padding: 22px 42px;
-        font-size: 35px;
+        padding: 22px 12px;
+        font-size: 25px;
     }
 
     .tgk{
         position: absolute;
-        width: 407px;
+        max-width: 78%;
         left: 35px;
         top: 1400px;
         border-radius: 31px;
