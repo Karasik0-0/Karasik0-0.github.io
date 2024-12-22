@@ -1,6 +1,8 @@
 let cvs = document.querySelector('#flappybird')
 let ctx = cvs.getContext('2d')
 
+
+
 // Птица
 let bird = document.createElement('img')
 bird.src = 'images/karas.png'
@@ -8,32 +10,32 @@ xPos = 50
 yPos = 250
 
 // Гравитация
-let grav = 0.16
-let change = 4.25
+let grav = 0.185
+let change = 4.55
 
 // Фон
 let bg = document.createElement('img')
-bg.src = 'images/bg.png'
+bg.src = 'images/bg1.png'
 
 // Трубы
 let upPipe = document.createElement('img')
-upPipe.src = 'images/pipeUp.png'
+upPipe.src = 'images/pipeUp1.png'
 let downPipe = document.createElement('img')
-downPipe.src = 'images/pipeBottom.png'
+downPipe.src = 'images/pipeBottom1.png'
 let xPipe = cvs.width
 let yPipe = 0
 let gap = 110
 let pipes_x = [xPipe, xPipe + cvs.width / 2 + upPipe.width / 2]
 let pipes_y = [yPipe, yPipe - 100]
 let score = 0
-ctx.fillStyle = 'black'
+ctx.fillStyle = 'white'
 ctx.font = '24px Arial'
 
 
 
 //Пол
 let fg = document.createElement('img')
-fg.src = 'images/fg.png'
+fg.src = 'images/fg1.png'
 let xFg = 0
 let yFg = 450
 
@@ -62,7 +64,7 @@ function draw() {
     ctx.drawImage(downPipe, pipes_x[i], pipes_y[i] +
       upPipe.height + gap
     )
-    pipes_x[i] -= 2
+    pipes_x[i] -= 1.7
 
     if(pipes_x[i] < -upPipe.width) {
               pipes_x[i] = cvs.width
@@ -105,5 +107,3 @@ function gameLoop(currentTime) {
 }
 
 requestAnimationFrame(gameLoop);
-
-
