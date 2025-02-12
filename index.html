@@ -4,7 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <title>Mr.Fish</title>
+    <style>
+        /* Стили для модального окна */
+        #modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+        #modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -20,18 +56,20 @@
         </nav>
     </header>
     <article>
-    <div>
-        <h1 class="zagol">Добро пожаловать<br>
-            на сайт<br>
-            блогеров!</h1>
-        <p class="zagol2">Здесь ты сможешь приобрести дизайн<br>
-            для своего ютуб канала, а именно:<br>
-            аватарки, баннеры и превью!<br>
-            По вопросам писать на почту</p>
-    </div>
-    <img class="circle" src="img/circle.png" alt="">
-    <img class="fish" src="img/fish.png" alt="">
-    <button class="button" type="button">ivanov.id89@gmail.com</button>
+        <div>
+            <h1 class="zagol">Добро пожаловать<br>
+                на сайт<br>
+                для блогеров</h1>
+            <p class="zagol2">Сдесь ты сможешь приобрести дизайн<br>
+                для своего ютуб канала, а именно:<br>
+                аватарки, баннеры и превью!<br>
+                По вопросам писать на почту</p>
+        </div>
+        <img class="circle" src="img/circle.png" alt="">
+        <img class="fish" src="img/fish.png" alt="">
+        
+        <!-- Кнопка для открытия QR-кода -->
+        <button class="button" type="button" id="generateQRButton">ivanov.id89@gmail.com</button>
     </article>
     <a class="work" href="#avatarka">Мои работы<img class="strelca" src="img/Featured.png"></a>
 
@@ -42,6 +80,15 @@
         <img class="primer" src="img/primer.png" alt="">
         <img class="pubg" src="img/pubg.png" alt="">
     </article>
+
+    <!-- Модальное окно для QR-кода -->
+    <div id="modal">
+        <div id="modal-content">
+            <span class="close">&times;</span>
+            <canvas id="qrCanvas"></canvas>
+        </div>
+    </div>
+
     <footer class="site-footer">
         <div class="footer-content">
             <p>&copy; 2023 Mr.Fish. Все права защищены.</p>
@@ -54,5 +101,31 @@
             </nav>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('generateQRButton').onclick = function() {
+            // Создаем QR-код
+            var qr = new QRious({
+                element: document.getElementById('qrCanvas'),
+                value: 'https://t.me/ваш_пользователь', // Замените на ваш Telegram
+                size: 200
+            });
+            
+            // Показываем модальное окно
+            document.getElementById('modal').style.display = "block";
+        }
+        // Закрытие модального окна
+        document.querySelector('.close').onclick = function() {
+            document.getElementById('modal').style.display = "none";
+        }
+
+        // Закрытие модального окна при клике вне его
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('modal')) {
+                document.getElementById('modal').style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
